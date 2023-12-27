@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <title>download</title>
+    </head>
+    <body>
+        <button>download</button>
+
+
+
+
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $("button").click(function(){
+               let y = 0;
+               let x = setInterval(function(){
+                y++;
+                $("button").text(`loading .... ${y}%`);
+                if(y > 99){
+                    clearInterval(x);
+                    $("button").text("Finish")
+                }
+               }, 50); 
+            });
+
+        </script>
+
+    </body>
+</html>
